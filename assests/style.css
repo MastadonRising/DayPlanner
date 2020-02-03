@@ -1,0 +1,32 @@
+
+
+#seize{
+    
+    text-align: center;
+};
+
+.container {
+    background-image:assests\images\Beach;
+
+};
+input{
+    border: none;
+    background: transparent;
+};
+.navbar{
+    background-color: #73919b;
+    border-bottom: solid;
+    border-bottom-color: #ccc;
+    width: 100%;
+    text-align: center;
+};
+
+.footer-text {
+    text-align: center;
+    width: 100%;
+}
+
+.align{
+    text-align: center;
+}
+
