@@ -1,12 +1,14 @@
 
 
 #seize{
-    
+    font-weight: bolder;
     text-align: center;
+    background-image: url('assests\images\seize.jfif')
 };
 
-.container {
-    background-image:assests\images\Beach;
+#test{
+    background-color: turquoise;
+    font-weight: bolder
 
 };
 input{
@@ -21,12 +23,12 @@ input{
     text-align: center;
 };
 
-.footer-text {
+.footer-text{
     text-align: center;
     width: 100%;
-}
+};
 
 .align{
     text-align: center;
-}
+};
 
