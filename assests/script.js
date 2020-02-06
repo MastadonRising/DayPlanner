@@ -28,8 +28,8 @@ for(i=9 ; i<= 17; i++) {
     // div with Hour
     var hourdiv = $('<div>').addClass('col-md-2 time');
     var hourspn =$('<span>').attr('class','time');
-    var hrInput = $('<div>').addClass('col-md-9').append($('<input>').attr('id', inputID).addClass('input').val(planTextArr[index]));
-    var svBtn = $('<div>').addClass('col-md-1 far fa-save saveIcon').attr('hour', index);
+    var hrInput = $('<div>').addClass('col-md-9 shadow-pulse').append($('<input>').attr('id', inputID).addClass('input').val(planTextArr[index])).attr('placeholder', 'Enter your Plans here');
+    var svBtn = $('<div>').addClass('col-md-1 fa fa-save saveIcon').attr('hour', index);
     $('#timeslots').append(newrows);
     newrows.append(hourdiv.append(hourspn));
     newrows.append(hrInput);
@@ -50,11 +50,14 @@ for(i=9 ; i<= 17; i++) {
     // set row color 
 
    if(i < currenthour){
-     hourdiv.addClass('test')
+     hourdiv.addClass('past')
+     svBtn.addClass('past')
    } else if(i === currenthour){
-    newrows.css("background-color","aqua")
+    hourdiv.addClass('present')
+    svBtn.addClass('present')
    } else {
-    newrows.css("background-color","cadetblue")
+    hourdiv.addClass('future')
+    svBtn.addClass('future')
    };
  
     // closing Braket for loop

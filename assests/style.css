@@ -2,7 +2,72 @@
 .footer-copyright{
     background-color: #4aaaa5;  
     text-decoration: double;
+    color: white;
 }
 .input{
 width: 100%;
+background: transparent;
+border: none;
+box-shadow: cadetblue 1px 1px 1px 1px;
+text-align: center;
+height: 50px;
+margin-top: 2px;
+margin-bottom: 2px;
+font-size: 1em;
+line-height: 1.5;
+border-radius: 15px 15px 15px 15px;
+margin-left: 0px;
+margin-right: 0px;
+
+}
+
+.input:active{
+    box-shadow: cornflowerblue 3px 3px 3px 3px;
+}
+.time{
+    text-align: right;
+    height: 50px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 1em;
+    line-height: 1.5;
+    border-radius: 15px 15px 15px 15px;
+    width: fit-content;
+}
+.saveIcon{
+text-align: center;
+font-size: 28px;
+    height: 50px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 1em;
+    line-height: 1.5;
+    border-radius: 15px 15px 15px 15px;
+    width: fit-content;
+
+}
+.shadow-pulse:hover{
+    box-shadow: cornflowerblue 3px 3px 3px 3px;
+    border-radius: 15px 15px 15px 15px;
+    padding: 0px;
+    
+}
+#seize{
+    text-align: right;
+    position: absolute;
+}
+.past{
+    background-color: tan;
+
+}
+.present{
+background-color: turquoise;
+font-weight: bolder;
+font-family: monospace;
+}
+.future{
+background-color: rgb(78, 133, 133);
+}
+.fa-save {
+    font-size:28px;
 }
