@@ -1,34 +1,8 @@
 
-
-#seize{
-    font-weight: bolder;
-    text-align: center;
-    background-image: url('assests\images\seize.jfif')
-};
-
-#test{
-    background-color: turquoise;
-    font-weight: bolder
-
-};
-input{
-    border: none;
-    background: transparent;
-};
-.navbar{
-    background-color: #73919b;
-    border-bottom: solid;
-    border-bottom-color: #ccc;
-    width: 100%;
-    text-align: center;
-};
-
-.footer-text{
-    text-align: center;
-    width: 100%;
-};
-
-.align{
-    text-align: center;
-};
-
+.footer-copyright{
+    background-color: #4aaaa5;  
+    text-decoration: double;
+}
+.input{
+width: 100%;
+}

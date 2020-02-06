@@ -11,24 +11,25 @@ date.text(today)
 var storedPlans = JSON.parse(localStorage.getItem("storedPlans"));
 // See if array exists if not create and set a test
 if (storedPlans !== null) {
-    Console.log(' not working')
-  planArr = storedPlans;
+    console.log(' not working')
+  planTextArr = storedPlans;
 } else {
     console.log('worked')
-  planTextArr = new Array(9);
-  planTextArr[4] = "test";
-}
+   planTextArr = new Array(9);
+};
 
 
 for(i=9 ; i<= 17; i++) {
+    
     var index = i -9
+    var inputID= 'input'+index
     // new row
     var newrows = $('<div>').addClass('row hourslots').attr('id', i);
     // div with Hour
     var hourdiv = $('<div>').addClass('col-md-2 time');
     var hourspn =$('<span>').attr('class','time');
-    var hrInput = $('<div>').addClass('col-md-9').append($('<input>').attr('id', index).val(planTextArr[index]));
-    var svBtn = $('<div>').addClass('col-md-1').append($('<i>').addClass('saveIcon').text('placeholder'))
+    var hrInput = $('<div>').addClass('col-md-9').append($('<input>').attr('id', inputID).addClass('input').val(planTextArr[index]));
+    var svBtn = $('<div>').addClass('col-md-1 far fa-save saveIcon').attr('hour', index);
     $('#timeslots').append(newrows);
     newrows.append(hourdiv.append(hourspn));
     newrows.append(hrInput);
@@ -49,18 +50,24 @@ for(i=9 ; i<= 17; i++) {
     // set row color 
 
    if(i < currenthour){
-     newrows.css("background-color","orange")
+     hourdiv.addClass('test')
    } else if(i === currenthour){
     newrows.css("background-color","aqua")
    } else {
-    newrows.css("background-color","red")
+    newrows.css("background-color","cadetblue")
    };
  
-
-    
-
-
     // closing Braket for loop
 };
+
+$('.saveIcon').on('click', function(event){
+  event.preventDefault();
+  var index = $(this).attr('hour')
+  var inputID = '#input'+ index
+  var value= $(inputID).val();  
+  planTextArr[index] = value;
+  localStorage.setItem("storedPlans", JSON.stringify(planTextArr))
+  });
+
 // closes on ready
 });
